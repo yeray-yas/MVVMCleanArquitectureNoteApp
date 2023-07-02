@@ -7,6 +7,7 @@ import com.yerayyas.mvvmcleanarquitecturenoteapp.feature_note.data.repository.No
 import com.yerayyas.mvvmcleanarquitecturenoteapp.feature_note.domain.repository.NoteRepository
 import com.yerayyas.mvvmcleanarquitecturenoteapp.feature_note.domain.use_case.AddNoteUseCase
 import com.yerayyas.mvvmcleanarquitecturenoteapp.feature_note.domain.use_case.DeleteNoteUseCase
+import com.yerayyas.mvvmcleanarquitecturenoteapp.feature_note.domain.use_case.GetNoteUseCase
 import com.yerayyas.mvvmcleanarquitecturenoteapp.feature_note.domain.use_case.GetNotesUseCase
 import com.yerayyas.mvvmcleanarquitecturenoteapp.feature_note.domain.use_case.NoteUseCases
 import dagger.Module
@@ -41,7 +42,7 @@ object AppModule {
             getNotes = GetNotesUseCase(repository),
             deleteNote = DeleteNoteUseCase(repository),
             addNoteUseCase = AddNoteUseCase(repository),
-            //getNoteUseCase = GetNoteUseCase(repository)
+            getNoteUseCase = GetNoteUseCase(repository)
         )
     }
 
